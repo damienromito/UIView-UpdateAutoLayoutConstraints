@@ -29,13 +29,14 @@
 - (CGFloat) constraintConstantforAttribute:(NSLayoutAttribute)attribute
 {
     NSLayoutConstraint * constraint = [self constraintForAttribute:attribute];
-    if(constraint)
-    {
+    
+    if (constraint) {
         return constraint.constant;
     }else
     {
-        return 0;
+        return NAN;
     }
+
 }
 
 
@@ -67,11 +68,13 @@
 
 - (void)hideView:(BOOL)hidden byAttribute:(NSLayoutAttribute)attribute
 {
+
+    CGFloat constraintConstant = [self constraintConstantforAttribute:attribute];
+
     if (hidden) {
 
-        CGFloat constraintConstant = [self constraintConstantforAttribute:attribute];
         
-        if (constraintConstant) {
+        if (!isnan(constraintConstant)) {
             self.alpha = constraintConstant;
         }else
         {
@@ -84,9 +87,11 @@
         
     }else
     {
-        NSLog(@"alpha %f", self.alpha);
-        self.hidden = NO;
-        [self setConstraintConstant:self.alpha forAttribute:attribute];
+        if (!isnan(constraintConstant)) {
+            self.hidden = NO;
+            [self setConstraintConstant:self.alpha forAttribute:attribute];
+            self.alpha = 1;
+        }
     }
     
 }
