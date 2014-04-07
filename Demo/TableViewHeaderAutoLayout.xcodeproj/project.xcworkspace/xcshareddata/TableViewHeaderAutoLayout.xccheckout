@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A0FE038F-765D-488B-964E-28D923930B5F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TableViewHeaderAutoLayout</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8E7205C9-75F3-49E1-A528-74D1A4E6241F</key>
+		<string>https://github.com/damienromito/UIView-UpdateAutoLayoutConstraints.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Demo/TableViewHeaderAutoLayout.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8E7205C9-75F3-49E1-A528-74D1A4E6241F</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/damienromito/UIView-UpdateAutoLayoutConstraints.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8E7205C9-75F3-49E1-A528-74D1A4E6241F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8E7205C9-75F3-49E1-A528-74D1A4E6241F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>UIView-UpdateAutoLayoutConstraints</string>
+		</dict>
+	</array>
+</dict>
+</plist>
