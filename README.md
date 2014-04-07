@@ -45,5 +45,12 @@ An easy way to create and update AutoLayout Constraints (Mainly to update Width 
     //if constraint doesn't exist, it will be created
     [myView1 setConstraintConstant:20 forAttribute:NSLayoutAttributeWidth];
     
+    //you can use tools to hide/show a uiview
+    [myView1 hideByHeight:YES];
+    
+    //then
+    [myView1 hideByHeight:NO];
+
+
 
     
