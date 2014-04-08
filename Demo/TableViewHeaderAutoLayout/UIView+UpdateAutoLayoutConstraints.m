@@ -66,35 +66,37 @@
 }
 
 
+
 - (void)hideView:(BOOL)hidden byAttribute:(NSLayoutAttribute)attribute
 {
-
-    CGFloat constraintConstant = [self constraintConstantforAttribute:attribute];
-
-    if (hidden) {
-
+    if (self.hidden != hidden) {
+        CGFloat constraintConstant = [self constraintConstantforAttribute:attribute];
         
-        if (!isnan(constraintConstant)) {
-            self.alpha = constraintConstant;
+        if (hidden)
+        {
+            
+            if (!isnan(constraintConstant)) {
+                self.alpha = constraintConstant;
+            }else
+            {
+                CGSize size = [self size];
+                self.alpha = (attribute == NSLayoutAttributeHeight)?size.height:size.width;
+            }
+            
+            [self setConstraintConstant:0 forAttribute:attribute];
+            self.hidden = YES;
+            
         }else
         {
-            CGSize size = [self size];
-            self.alpha = (attribute == NSLayoutAttributeHeight)?size.height:size.width;
-        }
-        
-        [self setConstraintConstant:0 forAttribute:attribute];
-        self.hidden = YES;
-        
-    }else
-    {
-        if (!isnan(constraintConstant)) {
-            self.hidden = NO;
-            [self setConstraintConstant:self.alpha forAttribute:attribute];
-            self.alpha = 1;
+            if (!isnan(constraintConstant) ) {
+                self.hidden = NO;
+                [self setConstraintConstant:self.alpha forAttribute:attribute];
+                self.alpha = 1;
+            }
         }
     }
-    
 }
+
 
 - (CGSize) size
 {
