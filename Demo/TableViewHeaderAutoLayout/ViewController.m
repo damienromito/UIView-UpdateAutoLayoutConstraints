@@ -10,7 +10,9 @@
 #import "UIView+UpdateAutoLayoutConstraints.h"
 
 @interface ViewController ()
-@property (nonatomic, strong) UILabel *hidableView;
+@property (nonatomic, strong) UIView *hidableView;
+@property (nonatomic, strong) UILabel *dynamicLabel;
+
 @property (nonatomic, strong) UIView *header;
 @end
 
@@ -23,20 +25,25 @@
     self.header = [[UIView alloc] init];
 
     UIButton * v1 = [UIButton new];
-    [v1 setTitle:@"HIDE/SHOW VIEW" forState:UIControlStateNormal];
+    [v1 setTitle:@"HIDE/SHOW VIEW BELOW" forState:UIControlStateNormal];
     [v1 addTarget:self action:@selector(actionToggle) forControlEvents:UIControlEventTouchUpInside];
     v1.translatesAutoresizingMaskIntoConstraints = NO;
     v1.backgroundColor = [UIColor redColor];
     [self.header addSubview:v1];
     
-    //VIEW WITH DYNAMIC HEIGHT
-    self.hidableView = [UILabel new];
+    self.hidableView = [UIView new];
     self.hidableView.translatesAutoresizingMaskIntoConstraints = NO;
-    self.hidableView.backgroundColor = [UIColor whiteColor];
-    self.hidableView.numberOfLines = 0;
-    self.hidableView.preferredMaxLayoutWidth = 320; //YOU NEED TO DEFINE THE preferredMaxLayoutWidth
-    self.hidableView.text = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sagittis adipiscing orci";
+    self.hidableView.backgroundColor = [UIColor yellowColor];
     [self.header addSubview:self.hidableView];
+    
+    //VIEW WITH DYNAMIC HEIGHT
+    self.dynamicLabel = [UILabel new];
+    self.dynamicLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    self.dynamicLabel.backgroundColor = [UIColor whiteColor];
+    self.dynamicLabel.numberOfLines = 0;
+    self.dynamicLabel.preferredMaxLayoutWidth = 320; //YOU NEED TO DEFINE THE preferredMaxLayoutWidth
+    self.dynamicLabel.text = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sagittis adipiscing orci";
+    [self.header addSubview:self.dynamicLabel];
     
     UIView * v2 = [UIView new];
     v2.translatesAutoresizingMaskIntoConstraints = NO;
@@ -45,6 +52,7 @@
     
     NSDictionary *views = @{@"v1" : v1,
                             @"hidableView":self.hidableView,
+                            @"dynamicLabel":self.dynamicLabel,
                             @"v2" : v2,
                             };
     
@@ -56,7 +64,7 @@
     
     
     [self.header addConstraints:[NSLayoutConstraint
-                                constraintsWithVisualFormat:@"V:|[v1(100)]-[hidableView]-[v2(40)]|"
+                                constraintsWithVisualFormat:@"V:|[v1(100)]-[hidableView(30)][dynamicLabel]-[v2(40)]|"
                                 options: NSLayoutFormatAlignAllRight | NSLayoutFormatAlignAllLeft
                                 metrics:0
                                 views:views]];
