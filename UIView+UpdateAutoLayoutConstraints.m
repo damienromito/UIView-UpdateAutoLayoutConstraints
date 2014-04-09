@@ -20,7 +20,8 @@
         return YES;
     }else
     {
-        [self.superview addConstraint: [NSLayoutConstraint constraintWithItem:self attribute:attribute relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0f constant:constant]];
+        UIView* container = (attribute == NSLayoutAttributeWidth || attribute == NSLayoutAttributeHeight) ? self : self.superview;
+        [container addConstraint: [NSLayoutConstraint constraintWithItem:self attribute:attribute relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0f constant:constant]];
         return NO;
     }
 }
@@ -43,7 +44,8 @@
 - (NSLayoutConstraint*) constraintForAttribute:(NSLayoutAttribute)attribute
 {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"firstAttribute = %d && firstItem = %@", attribute, self];
-    NSArray *fillteredArray = [[self.superview constraints] filteredArrayUsingPredicate:predicate];
+    UIView* container = (attribute == NSLayoutAttributeWidth || attribute == NSLayoutAttributeHeight) ? self : self.superview;
+    NSArray *fillteredArray = [[container constraints] filteredArrayUsingPredicate:predicate];
     if(fillteredArray.count == 0)
     {
         return nil;
