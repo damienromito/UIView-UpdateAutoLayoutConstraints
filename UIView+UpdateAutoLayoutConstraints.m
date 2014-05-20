@@ -81,7 +81,7 @@
                 self.alpha = constraintConstant;
             }else
             {
-                CGSize size = [self size];
+                CGSize size = [self getSize];
                 self.alpha = (attribute == NSLayoutAttributeHeight)?size.height:size.width;
             }
             
@@ -100,7 +100,7 @@
 }
 
 
-- (CGSize) size
+- (CGSize)getSize
 {
     [self setNeedsLayout];
     [self layoutIfNeeded];
