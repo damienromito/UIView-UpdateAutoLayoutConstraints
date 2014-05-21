@@ -110,5 +110,12 @@
     [self layoutIfNeeded];
 }
 
+- (void)sizeToSubviews
+{
+    [self updateSizes];
+    CGSize fittingSize = [self systemLayoutSizeFittingSize: UILayoutFittingCompressedSize];
+    self.frame = CGRectMake(0, 0, 320, fittingSize.height);
+}
+
 
 @end

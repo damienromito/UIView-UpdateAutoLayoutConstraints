@@ -74,7 +74,7 @@
                                  options: NSLayoutFormatAlignAllRight | NSLayoutFormatAlignAllLeft
                                  metrics:0
                                  views:views]];
-
+    
     
     
     [self resizeTableViewHeader];
@@ -86,10 +86,7 @@
 - (void)resizeTableViewHeader
 {
     
-    [self.header getSize];
-    //GET THE SIZE OF THE CONTAINER
-    CGSize fittingSize = [self.header systemLayoutSizeFittingSize: UILayoutFittingCompressedSize];
-    self.header.frame = CGRectMake(0, 0, 320, fittingSize.height);
+    [self.header sizeToSubviews];
     self.tableView.tableHeaderView = self.header;
 }
 

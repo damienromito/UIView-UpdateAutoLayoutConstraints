@@ -16,4 +16,5 @@
 - (void)hideByHeight:(BOOL)hidden;
 - (void)hideByWidth:(BOOL)hidden;
 - (CGSize) getSize;
+- (void)sizeToSubviews;
 @end
