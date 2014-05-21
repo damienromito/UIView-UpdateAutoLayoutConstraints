@@ -15,5 +15,7 @@
 - (void)hideView:(BOOL)hidden byAttribute:(NSLayoutAttribute)attribute;
 - (void)hideByHeight:(BOOL)hidden;
 - (void)hideByWidth:(BOOL)hidden;
-- (CGSize) size;
+- (CGSize) getSize;
+- (CGRect)getFrame;
+- (void)heightToFitWithBottomPadding:(CGFloat)bottomMargin;
 @end
