@@ -20,8 +20,7 @@
         return YES;
     }else
     {
-        UIView* container = (attribute == NSLayoutAttributeWidth || attribute == NSLayoutAttributeHeight) ? self : self.superview;
-        [container addConstraint: [NSLayoutConstraint constraintWithItem:self attribute:attribute relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0f constant:constant]];
+        [self.superview addConstraint: [NSLayoutConstraint constraintWithItem:self attribute:attribute relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0f constant:constant]];
         return NO;
     }
 }
@@ -37,15 +36,14 @@
     {
         return NAN;
     }
-
+    
 }
 
 
 - (NSLayoutConstraint*) constraintForAttribute:(NSLayoutAttribute)attribute
 {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"firstAttribute = %d && firstItem = %@", attribute, self];
-    UIView* container = (attribute == NSLayoutAttributeWidth || attribute == NSLayoutAttributeHeight) ? self : self.superview;
-    NSArray *fillteredArray = [[container constraints] filteredArrayUsingPredicate:predicate];
+    NSArray *fillteredArray = [[self.superview constraints] filteredArrayUsingPredicate:predicate];
     if(fillteredArray.count == 0)
     {
         return nil;
@@ -100,40 +98,17 @@
 }
 
 
-- (CGSize)getSize
+- (CGSize) getSize
 {
-    [self setNeedsLayout];
-    [self layoutIfNeeded];
-    
-    NSLog(@"POSITION %f %f", self.frame.origin.x, self.frame.origin.y);
+    [self updateSizes];
     return CGSizeMake(self.bounds.size.width, self.bounds.size.height);
 }
 
-- (CGRect)getFrame
+- (void)updateSizes
 {
     [self setNeedsLayout];
     [self layoutIfNeeded];
-    
-    NSLog(@"POSITION %f %f", self.frame.origin.x, self.frame.origin.y);
-    return CGRectMake(self.frame.origin.x, self.frame.origin.y, self.bounds.size.width, self.bounds.size.height);
 }
-
-- (void)heightToFitWithBottomPadding:(CGFloat)bottomMargin
-{
-    [self setNeedsLayout];
-    [self layoutIfNeeded];
-    
-    [self.subviews enumerateObjectsUsingBlock:^(UIView *v, NSUInteger idx, BOOL *stop) {
-        if (idx == self.subviews.count-1) {
-            CGFloat containerHeight = v.bounds.size.height +  v.frame.origin.y + bottomMargin;
-            CGRect frame = self.frame;
-            frame.size.height = containerHeight;
-            self.frame = frame;
-        }
-    }];
-
-}
-
 
 
 @end
