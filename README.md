@@ -3,6 +3,10 @@ UIView-UpdateAutoLayoutConstraints
 
 An easy way to create and update AutoLayout Constraints (Mainly to update Width and Height of UIView)
 
+
+![alt text](https://github.com/damienromito/UIView-UpdateAutoLayoutConstraints/blob/master/picture.jpg "Resize tableViewHeader")
+
+
 **1 - import Category**
 
 ```objective-c 
