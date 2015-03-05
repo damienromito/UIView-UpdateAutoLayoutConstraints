@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F57D55D1AA890C0006BC3EA /* UIView+UpdateAutoLayoutConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F57D55C1AA890C0006BC3EA /* UIView+UpdateAutoLayoutConstraints.m */; };
+		1F57D5601AA89582006BC3EA /* UIView+UpdateAutoLayoutConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F57D55F1AA89582006BC3EA /* UIView+UpdateAutoLayoutConstraints.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -19,8 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1F57D55B1AA890C0006BC3EA /* UIView+UpdateAutoLayoutConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UpdateAutoLayoutConstraints.h"; sourceTree = "<group>"; };
-		1F57D55C1AA890C0006BC3EA /* UIView+UpdateAutoLayoutConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UpdateAutoLayoutConstraints.m"; sourceTree = "<group>"; };
+		1F57D55E1AA89582006BC3EA /* UIView+UpdateAutoLayoutConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+UpdateAutoLayoutConstraints.h"; path = "PodFiles/UIView+UpdateAutoLayoutConstraints.h"; sourceTree = "<group>"; };
+		1F57D55F1AA89582006BC3EA /* UIView+UpdateAutoLayoutConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+UpdateAutoLayoutConstraints.m"; path = "PodFiles/UIView+UpdateAutoLayoutConstraints.m"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* UpdateAutoLayoutConstraints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpdateAutoLayoutConstraints.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -82,12 +82,12 @@
 		6003F593195388D20070C39A /* UpdateAutoLayoutConstraints */ = {
 			isa = PBXGroup;
 			children = (
+				1F57D55E1AA89582006BC3EA /* UIView+UpdateAutoLayoutConstraints.h */,
+				1F57D55F1AA89582006BC3EA /* UIView+UpdateAutoLayoutConstraints.m */,
 				6003F59C195388D20070C39A /* DRAppDelegate.h */,
 				6003F59D195388D20070C39A /* DRAppDelegate.m */,
 				6003F5A5195388D20070C39A /* DRViewController.h */,
 				6003F5A6195388D20070C39A /* DRViewController.m */,
-				1F57D55B1AA890C0006BC3EA /* UIView+UpdateAutoLayoutConstraints.h */,
-				1F57D55C1AA890C0006BC3EA /* UIView+UpdateAutoLayoutConstraints.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -171,7 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* DRAppDelegate.m in Sources */,
-				1F57D55D1AA890C0006BC3EA /* UIView+UpdateAutoLayoutConstraints.m in Sources */,
+				1F57D5601AA89582006BC3EA /* UIView+UpdateAutoLayoutConstraints.m in Sources */,
 				6003F5A7195388D20070C39A /* DRViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
