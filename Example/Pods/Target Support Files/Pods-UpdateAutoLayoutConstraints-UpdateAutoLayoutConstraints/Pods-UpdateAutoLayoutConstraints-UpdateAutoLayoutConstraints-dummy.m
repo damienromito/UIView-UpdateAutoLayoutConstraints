@@ -1,5 +1,0 @@
-#import <Foundation/Foundation.h>
-@interface PodsDummy_Pods_UpdateAutoLayoutConstraints_UpdateAutoLayoutConstraints : NSObject
-@end
-@implementation PodsDummy_Pods_UpdateAutoLayoutConstraints_UpdateAutoLayoutConstraints
-@end

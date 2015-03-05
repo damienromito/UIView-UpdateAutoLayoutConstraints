@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F57D55D1AA890C0006BC3EA /* UIView+UpdateAutoLayoutConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F57D55C1AA890C0006BC3EA /* UIView+UpdateAutoLayoutConstraints.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -15,14 +16,11 @@
 		6003F59E195388D20070C39A /* DRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* DRAppDelegate.m */; };
 		6003F5A7195388D20070C39A /* DRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* DRViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
-		C9E1BB33346B6CB74FC50790 /* libPods-UpdateAutoLayoutConstraints.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4345BA1DFCC4230234C70F3F /* libPods-UpdateAutoLayoutConstraints.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2DA458105070CD1980127CA4 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		4321712A5A1F5F2B24D048F8 /* UpdateAutoLayoutConstraints.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = UpdateAutoLayoutConstraints.podspec; path = ../UpdateAutoLayoutConstraints.podspec; sourceTree = "<group>"; };
-		4345BA1DFCC4230234C70F3F /* libPods-UpdateAutoLayoutConstraints.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UpdateAutoLayoutConstraints.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		51DBFF0E19F6E670C243B66A /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F57D55B1AA890C0006BC3EA /* UIView+UpdateAutoLayoutConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UpdateAutoLayoutConstraints.h"; sourceTree = "<group>"; };
+		1F57D55C1AA890C0006BC3EA /* UIView+UpdateAutoLayoutConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UpdateAutoLayoutConstraints.m"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* UpdateAutoLayoutConstraints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpdateAutoLayoutConstraints.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -37,11 +35,6 @@
 		6003F5A6195388D20070C39A /* DRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		6895229D204B2EED4D190B65 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		7A637531A5DB707E27339ACA /* Pods-UpdateAutoLayoutConstraints.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpdateAutoLayoutConstraints.release.xcconfig"; path = "Pods/Target Support Files/Pods-UpdateAutoLayoutConstraints/Pods-UpdateAutoLayoutConstraints.release.xcconfig"; sourceTree = "<group>"; };
-		7DDBB48EA42318F1A7FA8D97 /* Pods-UpdateAutoLayoutConstraints.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpdateAutoLayoutConstraints.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UpdateAutoLayoutConstraints/Pods-UpdateAutoLayoutConstraints.debug.xcconfig"; sourceTree = "<group>"; };
-		9EC4B0469413A791B4DB67C7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		D27392ECD5DF013A2D135CD4 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +45,6 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				C9E1BB33346B6CB74FC50790 /* libPods-UpdateAutoLayoutConstraints.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,11 +54,9 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
-				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* UpdateAutoLayoutConstraints */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
-				95E3BE6E2BC86B397870F9B2 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,8 +75,6 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				51DBFF0E19F6E670C243B66A /* libPods-Tests.a */,
-				4345BA1DFCC4230234C70F3F /* libPods-UpdateAutoLayoutConstraints.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -98,6 +86,8 @@
 				6003F59D195388D20070C39A /* DRAppDelegate.m */,
 				6003F5A5195388D20070C39A /* DRViewController.h */,
 				6003F5A6195388D20070C39A /* DRViewController.m */,
+				1F57D55B1AA890C0006BC3EA /* UIView+UpdateAutoLayoutConstraints.h */,
+				1F57D55C1AA890C0006BC3EA /* UIView+UpdateAutoLayoutConstraints.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -115,27 +105,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
-			isa = PBXGroup;
-			children = (
-				4321712A5A1F5F2B24D048F8 /* UpdateAutoLayoutConstraints.podspec */,
-				6895229D204B2EED4D190B65 /* README.md */,
-				9EC4B0469413A791B4DB67C7 /* LICENSE */,
-			);
-			name = "Podspec Metadata";
-			sourceTree = "<group>";
-		};
-		95E3BE6E2BC86B397870F9B2 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2DA458105070CD1980127CA4 /* Pods-Tests.debug.xcconfig */,
-				D27392ECD5DF013A2D135CD4 /* Pods-Tests.release.xcconfig */,
-				7DDBB48EA42318F1A7FA8D97 /* Pods-UpdateAutoLayoutConstraints.debug.xcconfig */,
-				7A637531A5DB707E27339ACA /* Pods-UpdateAutoLayoutConstraints.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,11 +112,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "UpdateAutoLayoutConstraints" */;
 			buildPhases = (
-				B550238F2920DB5EC6CCB5A4 /* Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				4CFD4E87B654D0D2F8D1FEB7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -198,45 +165,13 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		4CFD4E87B654D0D2F8D1FEB7 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UpdateAutoLayoutConstraints/Pods-UpdateAutoLayoutConstraints-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B550238F2920DB5EC6CCB5A4 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		6003F586195388D20070C39A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* DRAppDelegate.m in Sources */,
+				1F57D55D1AA890C0006BC3EA /* UIView+UpdateAutoLayoutConstraints.m in Sources */,
 				6003F5A7195388D20070C39A /* DRViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
@@ -330,7 +265,6 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7DDBB48EA42318F1A7FA8D97 /* Pods-UpdateAutoLayoutConstraints.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -344,7 +278,6 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A637531A5DB707E27339ACA /* Pods-UpdateAutoLayoutConstraints.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
