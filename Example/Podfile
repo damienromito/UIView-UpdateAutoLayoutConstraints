@@ -1,7 +1,0 @@
-source 'https://github.com/CocoaPods/Specs.git'
-
-target 'UpdateAutoLayoutConstraints', :exclusive => true do
-  pod "UpdateAutoLayoutConstraints", :path => "../"
-end
-
-
