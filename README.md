@@ -1,15 +1,10 @@
-# UpdateAutoLayoutConstraints
+UIView-UpdateAutoLayoutConstraints
+==================================
 
-[![CI Status](http://img.shields.io/travis/Damien/UpdateAutoLayoutConstraints.svg?style=flat)](https://travis-ci.org/Damien/UpdateAutoLayoutConstraints)
-[![Version](https://img.shields.io/cocoapods/v/UpdateAutoLayoutConstraints.svg?style=flat)](http://cocoadocs.org/docsets/UpdateAutoLayoutConstraints)
-[![License](https://img.shields.io/cocoapods/l/UpdateAutoLayoutConstraints.svg?style=flat)](http://cocoadocs.org/docsets/UpdateAutoLayoutConstraints)
-[![Platform](https://img.shields.io/cocoapods/p/UpdateAutoLayoutConstraints.svg?style=flat)](http://cocoadocs.org/docsets/UpdateAutoLayoutConstraints)
+An easy way to create and update AutoLayout Constraints (Mainly to update Width and Height of UIView)
 
-## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
+![alt text](https://github.com/damienromito/UIView-UpdateAutoLayoutConstraints/blob/master/picture.jpg "Resize tableViewHeader")
 
 ## Installation
 
@@ -18,11 +13,58 @@ it, simply add the following line to your Podfile:
 
     pod "UpdateAutoLayoutConstraints"
 
-## Author
+    
+**1 - import Category**
 
-Damien, damien.romito@gmail.com
+```objective-c 
+#import "UIView+UpdateAutoLayoutConstraints.h"
+```
 
-## License
+**2 - create your UIViews**
+```objective-c 
+UIView *myView1 = [[UIView alloc]init];
+one.backgroundColor = [UIColor redColor];
+one.translatesAutoresizingMaskIntoConstraints = NO;  //<<-- Don't forget this line to enable AutoLayout
+[self.view addSubview:one];
 
-UpdateAutoLayoutConstraints is available under the MIT license. See the LICENSE file for more info.
+UIView *myView2 = [[UIView alloc]init];
+two.backgroundColor = [UIColor blueColor];
+two.translatesAutoresizingMaskIntoConstraints = NO;
+[self.view addSubview:two];
+```
+    
+**3 - create initial constraints**
+```objective-c 
+NSDictionary *metrics = @{@"height":@50.0};
+NSDictionary *views = NSDictionaryOfVariableBindings(myView1,myView2);
 
+[self.view addConstraints:[NSLayoutConstraint
+                           constraintsWithVisualFormat:@"|-[one]-|"
+                           options: 0
+                           metrics:metrics
+                           views:views]];
+
+[self.view addConstraints:[NSLayoutConstraint
+                                 constraintsWithVisualFormat:@"V:|-[myView1(50)][myView2]]"
+                                 options:NSLayoutFormatAlignAllLeft | NSLayoutFormatAlignAllRight
+                                 metrics:metrics
+                                 views:views]];
+                                     
+```       
+**4 - Whenever you want, Update this constraint**
+```objective-c
+//Hide View
+[myView1 setConstraintConstant:0 forAttribute:NSLayoutAttributeHeight];
+
+//if constraint doesn't exist, it will be created
+[myView1 setConstraintConstant:20 forAttribute:NSLayoutAttributeWidth];
+
+//you can use tools to hide/show a uiview
+[myView1 hideByHeight:YES];
+
+//then
+[myView1 hideByHeight:NO];
+```
+
+
+    

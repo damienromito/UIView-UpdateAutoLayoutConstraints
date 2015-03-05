@@ -1,0 +1,14 @@
+PODS:
+  - UpdateAutoLayoutConstraints (0.1.0)
+
+DEPENDENCIES:
+  - UpdateAutoLayoutConstraints (from `../`)
+
+EXTERNAL SOURCES:
+  UpdateAutoLayoutConstraints:
+    :path: ../
+
+SPEC CHECKSUMS:
+  UpdateAutoLayoutConstraints: 0f666f440120d79537869719b0bb35afa51d047a
+
+COCOAPODS: 0.34.2

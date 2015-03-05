@@ -7,12 +7,17 @@
 //
 
 #import "DRAppDelegate.h"
+#import "DRViewController.h"
 
 @implementation DRAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = [[DRViewController alloc] init];
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 							

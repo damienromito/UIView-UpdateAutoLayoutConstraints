@@ -4,8 +4,4 @@ target 'UpdateAutoLayoutConstraints', :exclusive => true do
   pod "UpdateAutoLayoutConstraints", :path => "../"
 end
 
-target 'Tests', :exclusive => true do
-  pod "UpdateAutoLayoutConstraints", :path => "../"
 
-  
-end
