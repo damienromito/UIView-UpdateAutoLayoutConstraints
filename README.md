@@ -6,14 +6,7 @@ An easy way to create and update AutoLayout Constraints (Mainly to update Width 
 
 ![alt text](https://github.com/damienromito/UIView-UpdateAutoLayoutConstraints/blob/master/picture.jpg "Resize tableViewHeader")
 
-## Installation
 
-UpdateAutoLayoutConstraints is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-    pod "UpdateAutoLayoutConstraints"
-
-    
 **1 - import Category**
 
 ```objective-c 
